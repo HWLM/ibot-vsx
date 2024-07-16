@@ -12,7 +12,7 @@ spring:
     # don't send traces to Zipkin in development
     exclude: org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinAutoConfiguration
   profiles:
-    include: ovsx
+    include: ovsx, mirror
   cache:
     jcache:
       config: classpath:ehcache.xml

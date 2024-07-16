@@ -1,7 +1,7 @@
 services:
 
   postgres:
-    image: postgres:latest
+    image: registry.cn-hangzhou.aliyuncs.com/wuzb/postgres:latest
     environment:
       - POSTGRES_USER=openvsx
       - POSTGRES_PASSWORD=openvsx
@@ -13,7 +13,7 @@ services:
       - '5432:5432'
 
   elasticsearch:
-    image: elasticsearch:8.7.1
+    image: registry.cn-hangzhou.aliyuncs.com/wuzb/elasticsearch:8.7.1
     environment:
       - xpack.security.enabled=false
       - xpack.ml.enabled=false
@@ -31,7 +31,7 @@ services:
       start_period: 5s
 
   kibana:
-    image: kibana:8.7.1
+    image: registry.cn-hangzhou.aliyuncs.com/wuzb/kibana:8.7.1
     ports:
       - "5601:5601"
     environment:
@@ -42,7 +42,7 @@ services:
       - kibana
 
   server:
-    image: openjdk:17
+    image: registry.cn-hangzhou.aliyuncs.com/wuzb/openjdk:17
     working_dir: /app
     command: sh -c 'scripts/generate-properties.sh --docker && ./gradlew assemble && ./gradlew runServer'
     volumes:
@@ -63,7 +63,7 @@ services:
       - backend
     
   webui:
-    image: node:18
+    image: registry.cn-hangzhou.aliyuncs.com/wuzb/node:18
     working_dir: /app
     command: sh -c 'yarn && yarn build && yarn build:default && yarn start:default'
     volumes:
@@ -77,7 +77,7 @@ services:
       - frontend
 
   cli:
-    image: node:18
+    image: registry.cn-hangzhou.aliyuncs.com/wuzb/node:18
     working_dir: /app
     command: sh -c 'yarn && yarn watch'
     volumes:
