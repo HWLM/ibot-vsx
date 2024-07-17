@@ -24,7 +24,7 @@ services:
       - 9200:9200
       - 9300:9300
     healthcheck:
-      test: curl -s http://elasticsearch01:9200 >/dev/null || exit 1
+      test: curl -s http://elasticsearch:9200 >/dev/null || exit 1
       interval: 10s
       timeout: 5s
       retries: 50
