@@ -49,6 +49,9 @@ services:
       - ./server:/app
     ports:
       - 8080:8080
+    environment:
+      - GITHUB_CLIENT_ID=Ov23liP4OMWYOivFIg5g
+      - GITHUB_CLIENT_SECRET=631dd1916555f5315371c623f3373191390af0ce
     depends_on:
       - postgres
       - elasticsearch
