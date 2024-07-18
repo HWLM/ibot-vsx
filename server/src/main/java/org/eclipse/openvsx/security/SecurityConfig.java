@@ -37,7 +37,7 @@ public class SecurityConfig {
                 registry -> registry
                         .requestMatchers(antMatchers("/*", "/login/**", "/oauth2/**", "/user", "/user/auth-error", "/logout", "/actuator/health/**", "/actuator/metrics", "/actuator/metrics/**", "/actuator/prometheus", "/v3/api-docs/**", "/swagger-resources/**", "/swagger-ui/**", "/webjars/**"))
                             .permitAll()
-                        .requestMatchers(antMatchers("/api/*/*/review", "/api/*/*/review/delete", "/api/user/publish", "/api/user/namespace/create"))
+                        .requestMatchers(antMatchers("/api/*/*/review", "/api/*/*/review/delete", "/api/user/namespace/create"))
                             .authenticated()
                         .requestMatchers(antMatchers("/api/**", "/vscode/**", "/documents/**", "/admin/report"))
                             .permitAll()
