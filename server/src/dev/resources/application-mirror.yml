@@ -18,7 +18,7 @@ ovsx:
       service-endpoint: https://openvsxorg.blob.core.windows.net/
       blob-container: resources
   webui:
-    url: https://open-vsx.org
+    url: https://openvsx.csbilin.com
   upstream:
     url: https://open-vsx.org
   foregroundHttpConnPool:
