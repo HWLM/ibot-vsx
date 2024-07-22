@@ -32,8 +32,8 @@ then
     echo "Using web frontend in Gitpod: `gp url 3000`"
     echo "ovsx.webui.url=`gp url 3000`" >> $OVSX_APP_PROFILE
 else
-    echo "Using web frontend on local machine: http://localhost:3000"
-    echo "ovsx.webui.url=http://localhost:3000" >> $OVSX_APP_PROFILE
+    echo "Using web frontend on local machine: https://3000-openvsx.csbilin.com"
+    echo "ovsx.webui.url=https://3000-openvsx.csbilin.com" >> $OVSX_APP_PROFILE
 fi
 
 # Set the GitHub OAuth client id and client secret
