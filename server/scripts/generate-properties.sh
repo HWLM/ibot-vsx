@@ -33,7 +33,7 @@ then
     echo "ovsx.webui.url=`gp url 3000`" >> $OVSX_APP_PROFILE
 else
     echo "Using web frontend on local machine: http://localhost:3000"
-    echo "ovsx.webui.url=https://openvsx.csbilin.com" >> $OVSX_APP_PROFILE
+    echo "ovsx.webui.url=http://localhost:3000" >> $OVSX_APP_PROFILE
 fi
 
 # Set the GitHub OAuth client id and client secret
