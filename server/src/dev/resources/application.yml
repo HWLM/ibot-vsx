@@ -42,11 +42,11 @@ spring:
           registration:
             eclipse:
               authorization-grant-type: authorization_code
-              redirect-uri: https://openvsx.csbilin.com/login/oauth2/code/github
+              redirect-uri: http://localhost/login/oauth2/code/github
               scope: openvsx_publisher_agreement, profile
             github:
               authorization-grant-type: authorization_code
-              redirect-uri: https://openvsx.csbilin.com/login/oauth2/code/github
+              redirect-uri: http://localhost/login/oauth2/code/github
               scope: openvsx_publisher_agreement, profile
               client-id: Ov23liP4OMWYOivFIg5g
               client-secret: 631dd1916555f5315371c623f3373191390af0ce
